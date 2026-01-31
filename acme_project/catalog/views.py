@@ -1,12 +1,12 @@
-#from django.shortcuts import render
+# Импортируем функцию render()
+from django.shortcuts import render
+    
+def product_detail(request):
+    template = 'catalog/product_detail.html'
+    return render(request, template)
 
-# Create your views here.
-
-from django.http import HttpResponse
 
 
 def product_list(request):
-    return HttpResponse('<h1>catalog_1</h1>') 
-    
-def product_detail(request):
-    return HttpResponse('<h2>catalog</h2>')
+    template_name = 'catalog/product_list'
+    return render(request, template_name)

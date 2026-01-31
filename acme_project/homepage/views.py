@@ -1,7 +1,6 @@
-# from django.shortcuts import render
-
-from django.http import HttpResponse
-
+# Импортируем функцию render()
+from django.shortcuts import render
 
 def index(request):
-    return HttpResponse('<h1>Homepage</h1>')
+    template_name = 'homepage/index.html'
+    return render(request, template_name)

@@ -1,0 +1,22 @@
+ <!-- base.html -->
+ <!DOCTYPE html>
+ <html lang="ru">
+   <head>
+    <title>{% block title %} {% endblock %}</title>
+   </head>
+   <body>
+     {% include "header.html" %}
+     <main>
+       <!-- Изменяемая часть: разная на всех страницах -->
+       {% block content %}{% endblock %}
+     </main>
+
+     <hr>
+
+     <aside>
+      {% block bottom %}{% endblock %}
+     </aside>
+     {% include "footer.html" %}
+   </body>
+ </html>
+ 
