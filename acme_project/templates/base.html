@@ -2,10 +2,12 @@
  <!DOCTYPE html>
  <html lang="ru">
    <head>
-    <title>{% block title %} {% endblock %}</title>
+    <title>
+      {% block title %} {% endblock %}
+    </title>
    </head>
    <body>
-     {% include "header.html" %}
+     {% include "includes/header.html" %}
      <main>
        <!-- Изменяемая часть: разная на всех страницах -->
        {% block content %}{% endblock %}
@@ -16,7 +18,7 @@
      <aside>
       {% block bottom %}{% endblock %}
      </aside>
-     {% include "footer.html" %}
+     {% include "includes/footer.html" %}
    </body>
  </html>
  

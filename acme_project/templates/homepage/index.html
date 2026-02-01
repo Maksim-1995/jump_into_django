@@ -1,11 +1,12 @@
  <!-- index.html --> 
  {% extends "base.html" %}
-  {% block title %}
-  <title>Главная</title>
+{% block title %}
+ГЛАВНАЯ
 {% endblock %} 
  <!-- Имя блока — content, такое же, как в базовом шаблоне --> 
  {% block content %}
-   <h1>Это главная страница проекта "ACME"!</h1>
+   <h1>{{ title }}</h1>
+   <p>Товар дня: {{ promo_product }}</p>
  {% endblock %}
  
 
